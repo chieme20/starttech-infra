@@ -1,0 +1,10 @@
+# Ignore local Terraform configuration directories
+.terraform/
+
+# Ignore sensitive state recording files
+*.tfstate
+*.tfstate.*
+
+# Ignore variable files containing private credentials
+*.tfvars
+*.tfvars.json

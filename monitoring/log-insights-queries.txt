@@ -1,0 +1,10 @@
+# Query 1: Track and inspect all 5xx Error logs from the Golang API app
+fields @timestamp, @message, status
+| filter status >= 500
+| sort @timestamp desc
+| limit 50
+
+# Query 2: Evaluate latency trends on app routes
+fields @timestamp, path, duration
+| filter path like "/api/"
+| stats avg(duration) by path
