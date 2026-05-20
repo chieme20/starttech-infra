@@ -24,12 +24,12 @@
       "height": 6,
       "properties": {
         "metrics": [
-          [ "AWS/ApplicationELB", "TargetResponseTime", "LoadBalancer", "starttech-backend-alb" ]
+          [ "AWS/ApplicationELB", "UnHealthyHostCount", "TargetGroup", "starttech-backend-tg-v6" ]
         ],
         "period": 60,
-        "stat": "Average",
+        "stat": "Maximum",
         "region": "us-east-1",
-        "title": "ALB Average Response Latency Time"
+        "title": "Target Group Unhealthy Host Count Tracking"
       }
     }
   ]
